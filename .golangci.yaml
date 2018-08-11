@@ -1,0 +1,21 @@
+run:
+  concurrency: 4
+  deadline: 3m
+  issues-exit-code: 1
+  tests: true
+
+linters-settings:
+  govet:
+    check-shadowing: false
+  gofmt:
+    simplify: true
+  gocyclo:
+    min-complexity: 10
+
+linters:
+  enable-all: true
+  disable:
+    - lll
+    - gochecknoglobals
+    - gochecknoinits
+    - prealloc
